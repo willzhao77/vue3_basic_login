@@ -1,7 +1,7 @@
 <template>
-    <div class="register">
-      <div>
-        <h1>LOGO</h1>
+    <div class="register-container">
+      <div class="register">
+        <h1>Please register</h1>
         <form @submit.prevent="submit">
           <div>
             <label for="name">用户名</label>
@@ -20,7 +20,7 @@
             <input v-model="password_confirmation" name="password_confirmation" type="password" />
           </div>
           <div>
-            <button>注册</button>
+            <button class="btn btn-primary">注册</button>
           </div>
         </form>
         <p>
@@ -60,27 +60,34 @@
   };
   </script>
   
-  <style scoped>
-  .register {
-    padding: 50px;
-    background-color: #eee;
-  }
-  
-  input {
-    margin-left: 10px;
-    height: 30px;
-    float: right;
-    clear: both;
-  }
-  
-  button {
-    margin-top: 10px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 250px;
-  }
+  <style lang="scss" scoped>
+    .register-container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .register {
+        margin: 0 auto;
+        padding: 50px;
+        background-color: #eee;
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 260px;
+          input {
+            margin-left: 10px;
+            height: 30px;
+            float: right;
+            clear: both;
+          }
+          button {
+            margin-top: 10px;
+          }
+        }
+        p {
+          margin-top: 20px;
+        }
+      }
+    }
   </style>
