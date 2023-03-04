@@ -40,10 +40,14 @@
   };
   </script>
   
-  <style scoped>
+  <style lang="scss" scoped>
   .login {
     padding: 50px;
     background-color: #eee;
+    form {
+      padding: 20px;
+      background-color: #aaa;
+    }
   }
   
   input {
